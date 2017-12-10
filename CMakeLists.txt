@@ -10,4 +10,3 @@ add_executable(libhandler_example
 target_link_libraries(libhandler_example
 	CONAN_PKG::libhandler
 )
-
