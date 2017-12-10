@@ -27,7 +27,7 @@ const lh_handlerdef _exn_def =
 
 lh_value my_exn_handle(lh_value(*action)(value), lh_value arg)
 {
-  return handle(&_exn_def, lh_value_null, action, arg);
+  return lh_handle(&_exn_def, lh_value_null, action, arg);
 }
 
 lh_value divide_by(lh_value x)
