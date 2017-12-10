@@ -4,6 +4,10 @@
 LH_DEFINE_EFFECT1(exn, raise)
 LH_DEFINE_VOIDOP1(exn, raise, lh_string)
 
+int divexn(int x, int y) {
+  return (y != 0 ? x / y : exn_raise("divide by zero"));
+}
+
 lh_value handle_exn_raise(lh_resume* r, lh_value local, lh_value arg) {
   printf("exception raised: %s\n", lh_lh_string_value(arg));
   return lh_value_null;
