@@ -5,12 +5,10 @@ LH_DEFINE_EFFECT1(exn, raise)
 LH_DEFINE_VOIDOP1(exn, raise, lh_string)
 
 int divexn(int x, int y) {
-  if(y != 0)
-  {
+  if(y != 0) {
     return x / y;
   }
-  else
-  {
+  else {
     exn_raise("divide by zero");
   }
 }
